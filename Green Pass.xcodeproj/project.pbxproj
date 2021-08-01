@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8520A43C26B67EF8005F0AFB /* GraphicsUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8520A43B26B67EF7005F0AFB /* GraphicsUtilities.swift */; };
+		854DF80D269211FF000FAB31 /* Green_PassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF80C269211FF000FAB31 /* Green_PassApp.swift */; };
+		854DF80F269211FF000FAB31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF80E269211FF000FAB31 /* ContentView.swift */; };
+		854DF81126921200000FAB31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854DF81026921200000FAB31 /* Assets.xcassets */; };
+		854DF81426921200000FAB31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854DF81326921200000FAB31 /* Preview Assets.xcassets */; };
+		854DF81926921200000FAB31 /* Green Pass WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 854DF81826921200000FAB31 /* Green Pass WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		854DF81E26921201000FAB31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854DF81D26921201000FAB31 /* Assets.xcassets */; };
+		854DF82526921201000FAB31 /* Green Pass WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 854DF82426921201000FAB31 /* Green Pass WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		854DF82A26921201000FAB31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF82926921201000FAB31 /* ContentView.swift */; };
+		854DF82C26921201000FAB31 /* Green_PassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF82B26921201000FAB31 /* Green_PassApp.swift */; };
+		854DF82E26921201000FAB31 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF82D26921201000FAB31 /* ComplicationController.swift */; };
+		854DF83026921202000FAB31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854DF82F26921202000FAB31 /* Assets.xcassets */; };
+		854DF83326921202000FAB31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854DF83226921202000FAB31 /* Preview Assets.xcassets */; };
+		854DF84326921261000FAB31 /* ehn-dcc-valuesets-main in Resources */ = {isa = PBXBuildFile; fileRef = 854DF84226921261000FAB31 /* ehn-dcc-valuesets-main */; };
+		854DF84526921289000FAB31 /* DataUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF84426921289000FAB31 /* DataUtilities.swift */; };
+		854DF84B269212A0000FAB31 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF84A269212A0000FAB31 /* QRCode.swift */; };
+		854DF84D269212A5000FAB31 /* SimulatedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF84C269212A5000FAB31 /* SimulatedData.swift */; };
+		854DF850269212DE000FAB31 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 854DF84F269212DE000FAB31 /* CodeScanner */; };
+		854DF8532692131D000FAB31 /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = 854DF8522692131D000FAB31 /* Gzip */; };
+		854DF85626921336000FAB31 /* SwiftCBOR in Frameworks */ = {isa = PBXBuildFile; productRef = 854DF85526921336000FAB31 /* SwiftCBOR */; };
+		854DF863269235F8000FAB31 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF862269235F8000FAB31 /* UserData.swift */; };
+		854DF864269235F8000FAB31 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF862269235F8000FAB31 /* UserData.swift */; };
+		854DF86B2692442F000FAB31 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF86A2692442F000FAB31 /* Connectivity.swift */; };
+		854DF86C2692442F000FAB31 /* Connectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF86A2692442F000FAB31 /* Connectivity.swift */; };
+		854DF87226925CF8000FAB31 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 854DF87126925CF8000FAB31 /* SwiftyJSON */; };
+		85C4E5DC2692FBAF000D51C6 /* GeneralUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C4E5DB2692FBAF000D51C6 /* GeneralUtilities.swift */; };
+		85C4E5DD2692FBAF000D51C6 /* GeneralUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C4E5DB2692FBAF000D51C6 /* GeneralUtilities.swift */; };
+		85C4E5DF2692FD25000D51C6 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C4E5DE2692FD25000D51C6 /* QRCode.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		854DF81A26921200000FAB31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 854DF801269211FE000FAB31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 854DF81726921200000FAB31;
+			remoteInfo = "Green Pass WatchKit App";
+		};
+		854DF82626921201000FAB31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 854DF801269211FE000FAB31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 854DF82326921201000FAB31;
+			remoteInfo = "Green Pass WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		854DF83A26921202000FAB31 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				854DF82526921201000FAB31 /* Green Pass WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		854DF83E26921202000FAB31 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				854DF81926921200000FAB31 /* Green Pass WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8520A43B26B67EF7005F0AFB /* GraphicsUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsUtilities.swift; sourceTree = "<group>"; };
+		854DF809269211FF000FAB31 /* Green Pass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Green Pass.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		854DF80C269211FF000FAB31 /* Green_PassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Green_PassApp.swift; sourceTree = "<group>"; };
+		854DF80E269211FF000FAB31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		854DF81026921200000FAB31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		854DF81326921200000FAB31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		854DF81526921200000FAB31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		854DF81826921200000FAB31 /* Green Pass WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Green Pass WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		854DF81D26921201000FAB31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		854DF81F26921201000FAB31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		854DF82426921201000FAB31 /* Green Pass WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Green Pass WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		854DF82926921201000FAB31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		854DF82B26921201000FAB31 /* Green_PassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Green_PassApp.swift; sourceTree = "<group>"; };
+		854DF82D26921201000FAB31 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		854DF82F26921202000FAB31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		854DF83226921202000FAB31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		854DF83426921202000FAB31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		854DF84226921261000FAB31 /* ehn-dcc-valuesets-main */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "ehn-dcc-valuesets-main"; sourceTree = "<group>"; };
+		854DF84426921289000FAB31 /* DataUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataUtilities.swift; sourceTree = "<group>"; };
+		854DF84A269212A0000FAB31 /* QRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
+		854DF84C269212A5000FAB31 /* SimulatedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatedData.swift; sourceTree = "<group>"; };
+		854DF862269235F8000FAB31 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		854DF86A2692442F000FAB31 /* Connectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connectivity.swift; sourceTree = "<group>"; };
+		85C4E5DB2692FBAF000D51C6 /* GeneralUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralUtilities.swift; sourceTree = "<group>"; };
+		85C4E5DE2692FD25000D51C6 /* QRCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCode.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		854DF806269211FF000FAB31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				854DF8532692131D000FAB31 /* Gzip in Frameworks */,
+				854DF850269212DE000FAB31 /* CodeScanner in Frameworks */,
+				854DF87226925CF8000FAB31 /* SwiftyJSON in Frameworks */,
+				854DF85626921336000FAB31 /* SwiftCBOR in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		854DF82126921201000FAB31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		854DF800269211FE000FAB31 = {
+			isa = PBXGroup;
+			children = (
+				854DF80B269211FF000FAB31 /* Green Pass */,
+				854DF81C26921200000FAB31 /* Green Pass WatchKit App */,
+				854DF82826921201000FAB31 /* Green Pass WatchKit Extension */,
+				854DF80A269211FF000FAB31 /* Products */,
+				854DF87326925D1C000FAB31 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		854DF80A269211FF000FAB31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				854DF809269211FF000FAB31 /* Green Pass.app */,
+				854DF81826921200000FAB31 /* Green Pass WatchKit App.app */,
+				854DF82426921201000FAB31 /* Green Pass WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		854DF80B269211FF000FAB31 /* Green Pass */ = {
+			isa = PBXGroup;
+			children = (
+				854DF80C269211FF000FAB31 /* Green_PassApp.swift */,
+				854DF80E269211FF000FAB31 /* ContentView.swift */,
+				854DF84426921289000FAB31 /* DataUtilities.swift */,
+				85C4E5DB2692FBAF000D51C6 /* GeneralUtilities.swift */,
+				854DF862269235F8000FAB31 /* UserData.swift */,
+				854DF86A2692442F000FAB31 /* Connectivity.swift */,
+				854DF84A269212A0000FAB31 /* QRCode.swift */,
+				854DF84C269212A5000FAB31 /* SimulatedData.swift */,
+				8520A43B26B67EF7005F0AFB /* GraphicsUtilities.swift */,
+				854DF81526921200000FAB31 /* Info.plist */,
+				854DF81026921200000FAB31 /* Assets.xcassets */,
+				854DF84226921261000FAB31 /* ehn-dcc-valuesets-main */,
+				854DF81226921200000FAB31 /* Preview Content */,
+			);
+			path = "Green Pass";
+			sourceTree = "<group>";
+		};
+		854DF81226921200000FAB31 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				854DF81326921200000FAB31 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		854DF81C26921200000FAB31 /* Green Pass WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				854DF81D26921201000FAB31 /* Assets.xcassets */,
+				854DF81F26921201000FAB31 /* Info.plist */,
+			);
+			path = "Green Pass WatchKit App";
+			sourceTree = "<group>";
+		};
+		854DF82826921201000FAB31 /* Green Pass WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				854DF82B26921201000FAB31 /* Green_PassApp.swift */,
+				854DF82926921201000FAB31 /* ContentView.swift */,
+				85C4E5DE2692FD25000D51C6 /* QRCode.swift */,
+				854DF82D26921201000FAB31 /* ComplicationController.swift */,
+				854DF82F26921202000FAB31 /* Assets.xcassets */,
+				854DF83426921202000FAB31 /* Info.plist */,
+				854DF83126921202000FAB31 /* Preview Content */,
+			);
+			path = "Green Pass WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		854DF83126921202000FAB31 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				854DF83226921202000FAB31 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		854DF87326925D1C000FAB31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		854DF808269211FF000FAB31 /* Green Pass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 854DF83F26921202000FAB31 /* Build configuration list for PBXNativeTarget "Green Pass" */;
+			buildPhases = (
+				854DF805269211FF000FAB31 /* Sources */,
+				854DF806269211FF000FAB31 /* Frameworks */,
+				854DF807269211FF000FAB31 /* Resources */,
+				854DF83E26921202000FAB31 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				854DF81B26921200000FAB31 /* PBXTargetDependency */,
+			);
+			name = "Green Pass";
+			packageProductDependencies = (
+				854DF84F269212DE000FAB31 /* CodeScanner */,
+				854DF8522692131D000FAB31 /* Gzip */,
+				854DF85526921336000FAB31 /* SwiftCBOR */,
+				854DF87126925CF8000FAB31 /* SwiftyJSON */,
+			);
+			productName = "Green Pass";
+			productReference = 854DF809269211FF000FAB31 /* Green Pass.app */;
+			productType = "com.apple.product-type.application";
+		};
+		854DF81726921200000FAB31 /* Green Pass WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 854DF83B26921202000FAB31 /* Build configuration list for PBXNativeTarget "Green Pass WatchKit App" */;
+			buildPhases = (
+				854DF81626921200000FAB31 /* Resources */,
+				854DF83A26921202000FAB31 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				854DF82726921201000FAB31 /* PBXTargetDependency */,
+			);
+			name = "Green Pass WatchKit App";
+			productName = "Green Pass WatchKit App";
+			productReference = 854DF81826921200000FAB31 /* Green Pass WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		854DF82326921201000FAB31 /* Green Pass WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 854DF83726921202000FAB31 /* Build configuration list for PBXNativeTarget "Green Pass WatchKit Extension" */;
+			buildPhases = (
+				854DF82026921201000FAB31 /* Sources */,
+				854DF82126921201000FAB31 /* Frameworks */,
+				854DF82226921201000FAB31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Green Pass WatchKit Extension";
+			packageProductDependencies = (
+			);
+			productName = "Green Pass WatchKit Extension";
+			productReference = 854DF82426921201000FAB31 /* Green Pass WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		854DF801269211FE000FAB31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					854DF808269211FF000FAB31 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					854DF81726921200000FAB31 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					854DF82326921201000FAB31 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 854DF804269211FE000FAB31 /* Build configuration list for PBXProject "Green Pass" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 854DF800269211FE000FAB31;
+			packageReferences = (
+				854DF84E269212DE000FAB31 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				854DF8512692131D000FAB31 /* XCRemoteSwiftPackageReference "GzipSwift" */,
+				854DF85426921336000FAB31 /* XCRemoteSwiftPackageReference "SwiftCBOR" */,
+				854DF87026925CF8000FAB31 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
+			productRefGroup = 854DF80A269211FF000FAB31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				854DF808269211FF000FAB31 /* Green Pass */,
+				854DF81726921200000FAB31 /* Green Pass WatchKit App */,
+				854DF82326921201000FAB31 /* Green Pass WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		854DF807269211FF000FAB31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				854DF81426921200000FAB31 /* Preview Assets.xcassets in Resources */,
+				854DF81126921200000FAB31 /* Assets.xcassets in Resources */,
+				854DF84326921261000FAB31 /* ehn-dcc-valuesets-main in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		854DF81626921200000FAB31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				854DF81E26921201000FAB31 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		854DF82226921201000FAB31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				854DF83326921202000FAB31 /* Preview Assets.xcassets in Resources */,
+				854DF83026921202000FAB31 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		854DF805269211FF000FAB31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				854DF80F269211FF000FAB31 /* ContentView.swift in Sources */,
+				854DF80D269211FF000FAB31 /* Green_PassApp.swift in Sources */,
+				85C4E5DC2692FBAF000D51C6 /* GeneralUtilities.swift in Sources */,
+				8520A43C26B67EF8005F0AFB /* GraphicsUtilities.swift in Sources */,
+				854DF84526921289000FAB31 /* DataUtilities.swift in Sources */,
+				854DF863269235F8000FAB31 /* UserData.swift in Sources */,
+				854DF86B2692442F000FAB31 /* Connectivity.swift in Sources */,
+				854DF84B269212A0000FAB31 /* QRCode.swift in Sources */,
+				854DF84D269212A5000FAB31 /* SimulatedData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		854DF82026921201000FAB31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85C4E5DF2692FD25000D51C6 /* QRCode.swift in Sources */,
+				854DF82C26921201000FAB31 /* Green_PassApp.swift in Sources */,
+				854DF82A26921201000FAB31 /* ContentView.swift in Sources */,
+				854DF86C2692442F000FAB31 /* Connectivity.swift in Sources */,
+				854DF864269235F8000FAB31 /* UserData.swift in Sources */,
+				854DF82E26921201000FAB31 /* ComplicationController.swift in Sources */,
+				85C4E5DD2692FBAF000D51C6 /* GeneralUtilities.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		854DF81B26921200000FAB31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 854DF81726921200000FAB31 /* Green Pass WatchKit App */;
+			targetProxy = 854DF81A26921200000FAB31 /* PBXContainerItemProxy */;
+		};
+		854DF82726921201000FAB31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 854DF82326921201000FAB31 /* Green Pass WatchKit Extension */;
+			targetProxy = 854DF82626921201000FAB31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		854DF83526921202000FAB31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		854DF83626921202000FAB31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		854DF83826921202000FAB31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2021080101;
+				DEVELOPMENT_ASSET_PATHS = "\"Green Pass WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = AM5PREL8LG;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Green Pass WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "scumm.it.Green-Pass.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		854DF83926921202000FAB31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2021080101;
+				DEVELOPMENT_ASSET_PATHS = "\"Green Pass WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = AM5PREL8LG;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Green Pass WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "scumm.it.Green-Pass.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		854DF83C26921202000FAB31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2021080101;
+				DEVELOPMENT_TEAM = AM5PREL8LG;
+				IBSC_MODULE = Green_Pass_WatchKit_Extension;
+				INFOPLIST_FILE = "Green Pass WatchKit App/Info.plist";
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "scumm.it.Green-Pass.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		854DF83D26921202000FAB31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2021080101;
+				DEVELOPMENT_TEAM = AM5PREL8LG;
+				IBSC_MODULE = Green_Pass_WatchKit_Extension;
+				INFOPLIST_FILE = "Green Pass WatchKit App/Info.plist";
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "scumm.it.Green-Pass.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		854DF84026921202000FAB31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2021080101;
+				DEVELOPMENT_ASSET_PATHS = "\"Green Pass/Preview Content\"";
+				DEVELOPMENT_TEAM = AM5PREL8LG;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Green Pass/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "scumm.it.Green-Pass";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		854DF84126921202000FAB31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2021080101;
+				DEVELOPMENT_ASSET_PATHS = "\"Green Pass/Preview Content\"";
+				DEVELOPMENT_TEAM = AM5PREL8LG;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Green Pass/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.3;
+				PRODUCT_BUNDLE_IDENTIFIER = "scumm.it.Green-Pass";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		854DF804269211FE000FAB31 /* Build configuration list for PBXProject "Green Pass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				854DF83526921202000FAB31 /* Debug */,
+				854DF83626921202000FAB31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		854DF83726921202000FAB31 /* Build configuration list for PBXNativeTarget "Green Pass WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				854DF83826921202000FAB31 /* Debug */,
+				854DF83926921202000FAB31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		854DF83B26921202000FAB31 /* Build configuration list for PBXNativeTarget "Green Pass WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				854DF83C26921202000FAB31 /* Debug */,
+				854DF83D26921202000FAB31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		854DF83F26921202000FAB31 /* Build configuration list for PBXNativeTarget "Green Pass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				854DF84026921202000FAB31 /* Debug */,
+				854DF84126921202000FAB31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		854DF84E269212DE000FAB31 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.7;
+			};
+		};
+		854DF8512692131D000FAB31 /* XCRemoteSwiftPackageReference "GzipSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/1024jp/GzipSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+		854DF85426921336000FAB31 /* XCRemoteSwiftPackageReference "SwiftCBOR" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/unrelentingtech/SwiftCBOR.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.3;
+			};
+		};
+		854DF87026925CF8000FAB31 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		854DF84F269212DE000FAB31 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 854DF84E269212DE000FAB31 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+		854DF8522692131D000FAB31 /* Gzip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 854DF8512692131D000FAB31 /* XCRemoteSwiftPackageReference "GzipSwift" */;
+			productName = Gzip;
+		};
+		854DF85526921336000FAB31 /* SwiftCBOR */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 854DF85426921336000FAB31 /* XCRemoteSwiftPackageReference "SwiftCBOR" */;
+			productName = SwiftCBOR;
+		};
+		854DF87126925CF8000FAB31 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 854DF87026925CF8000FAB31 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 854DF801269211FE000FAB31 /* Project object */;
+}
