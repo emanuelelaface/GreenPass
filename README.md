@@ -7,3 +7,10 @@ The pass is also displayed on the Apple Watch, when available.
 
 The color of the pass is green when the signature is valid and the date of expiration is at least a week in the future.
 If the expiration date is within a week the color will become orange and in all the other cases (invalid signature or expired pass) the color will be red.
+
+ScreenShots:
+https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/iPhone-main.png
+https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/iPhone-details.png
+https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/Watch-QR.png
+https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/Watch-main.png
+https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/Watch-details.png
