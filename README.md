@@ -9,18 +9,8 @@ The color of the pass is green when the signature is valid and the date of expir
 If the expiration date is within a week the color will become orange and in all the other cases (invalid signature or expired pass) the color will be red.
 
 ScreenShots:
-![iOS Main](
-https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/iPhone-main.png "iOS Main")
 
-![iOS Details](
-https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/iPhone-details.png "iOS Details")
+<img src="https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/iPhone-main.png" alt="iOS Main" width="300"/> <img src="https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/iPhone-details.png" alt="iOS Details" width="300"/>
 
-![Apple Watch QR Code](
-https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/Watch-QR.png "Apple Watch QR Code")
-
-![Apple Watch Main](
-https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/Watch-main.png "Apple Watch Main")
-
-![Apple Watch Details](
-https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/Watch-details.png "Apple Watch Details")
+<img src="https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/Watch-QR.png" alt="Apple Watch QR Code" width="200"/> <img src="https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/Watch-main.png"  alt="Apple Watch Main" width="200"/> <img src="https://github.com/emanuelelaface/GreenPass/blob/master/ScreenShots/Watch-details.png"  alt="Apple Watch Details" width="200"/>
 
