@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8520A43C26B67EF8005F0AFB /* GraphicsUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8520A43B26B67EF7005F0AFB /* GraphicsUtilities.swift */; };
+		853B676E26C11CAE00049DB9 /* CodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B676D26C11CAE00049DB9 /* CodeScanner.swift */; };
 		854DF80D269211FF000FAB31 /* Green_PassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF80C269211FF000FAB31 /* Green_PassApp.swift */; };
 		854DF80F269211FF000FAB31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF80E269211FF000FAB31 /* ContentView.swift */; };
 		854DF81126921200000FAB31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 854DF81026921200000FAB31 /* Assets.xcassets */; };
@@ -24,7 +25,6 @@
 		854DF84526921289000FAB31 /* DataUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF84426921289000FAB31 /* DataUtilities.swift */; };
 		854DF84B269212A0000FAB31 /* QRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF84A269212A0000FAB31 /* QRCode.swift */; };
 		854DF84D269212A5000FAB31 /* SimulatedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF84C269212A5000FAB31 /* SimulatedData.swift */; };
-		854DF850269212DE000FAB31 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 854DF84F269212DE000FAB31 /* CodeScanner */; };
 		854DF8532692131D000FAB31 /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = 854DF8522692131D000FAB31 /* Gzip */; };
 		854DF85626921336000FAB31 /* SwiftCBOR in Frameworks */ = {isa = PBXBuildFile; productRef = 854DF85526921336000FAB31 /* SwiftCBOR */; };
 		854DF863269235F8000FAB31 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854DF862269235F8000FAB31 /* UserData.swift */; };
@@ -81,6 +81,7 @@
 
 /* Begin PBXFileReference section */
 		8520A43B26B67EF7005F0AFB /* GraphicsUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphicsUtilities.swift; sourceTree = "<group>"; };
+		853B676D26C11CAE00049DB9 /* CodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScanner.swift; sourceTree = "<group>"; };
 		854DF809269211FF000FAB31 /* Green Pass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Green Pass.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		854DF80C269211FF000FAB31 /* Green_PassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Green_PassApp.swift; sourceTree = "<group>"; };
 		854DF80E269211FF000FAB31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,7 +114,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				854DF8532692131D000FAB31 /* Gzip in Frameworks */,
-				854DF850269212DE000FAB31 /* CodeScanner in Frameworks */,
 				854DF87226925CF8000FAB31 /* SwiftyJSON in Frameworks */,
 				854DF85626921336000FAB31 /* SwiftCBOR in Frameworks */,
 			);
@@ -162,6 +162,7 @@
 				854DF84A269212A0000FAB31 /* QRCode.swift */,
 				854DF84C269212A5000FAB31 /* SimulatedData.swift */,
 				8520A43B26B67EF7005F0AFB /* GraphicsUtilities.swift */,
+				853B676D26C11CAE00049DB9 /* CodeScanner.swift */,
 				854DF81526921200000FAB31 /* Info.plist */,
 				854DF81026921200000FAB31 /* Assets.xcassets */,
 				854DF84226921261000FAB31 /* ehn-dcc-valuesets-main */,
@@ -235,7 +236,6 @@
 			);
 			name = "Green Pass";
 			packageProductDependencies = (
-				854DF84F269212DE000FAB31 /* CodeScanner */,
 				854DF8522692131D000FAB31 /* Gzip */,
 				854DF85526921336000FAB31 /* SwiftCBOR */,
 				854DF87126925CF8000FAB31 /* SwiftyJSON */,
@@ -310,7 +310,6 @@
 			);
 			mainGroup = 854DF800269211FE000FAB31;
 			packageReferences = (
-				854DF84E269212DE000FAB31 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 				854DF8512692131D000FAB31 /* XCRemoteSwiftPackageReference "GzipSwift" */,
 				854DF85426921336000FAB31 /* XCRemoteSwiftPackageReference "SwiftCBOR" */,
 				854DF87026925CF8000FAB31 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
@@ -366,6 +365,7 @@
 				85C4E5DC2692FBAF000D51C6 /* GeneralUtilities.swift in Sources */,
 				8520A43C26B67EF8005F0AFB /* GraphicsUtilities.swift in Sources */,
 				854DF84526921289000FAB31 /* DataUtilities.swift in Sources */,
+				853B676E26C11CAE00049DB9 /* CodeScanner.swift in Sources */,
 				854DF863269235F8000FAB31 /* UserData.swift in Sources */,
 				854DF86B2692442F000FAB31 /* Connectivity.swift in Sources */,
 				854DF84B269212A0000FAB31 /* QRCode.swift in Sources */,
@@ -520,7 +520,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021080101;
+				CURRENT_PROJECT_VERSION = 2021080901;
 				DEVELOPMENT_ASSET_PATHS = "\"Green Pass WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = AM5PREL8LG;
 				ENABLE_PREVIEWS = YES;
@@ -530,7 +530,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "scumm.it.Green-Pass.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -548,7 +548,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021080101;
+				CURRENT_PROJECT_VERSION = 2021080901;
 				DEVELOPMENT_ASSET_PATHS = "\"Green Pass WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = AM5PREL8LG;
 				ENABLE_PREVIEWS = YES;
@@ -558,7 +558,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "scumm.it.Green-Pass.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -578,11 +578,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021080101;
+				CURRENT_PROJECT_VERSION = 2021080901;
 				DEVELOPMENT_TEAM = AM5PREL8LG;
 				IBSC_MODULE = Green_Pass_WatchKit_Extension;
 				INFOPLIST_FILE = "Green Pass WatchKit App/Info.plist";
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "scumm.it.Green-Pass.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -600,11 +600,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021080101;
+				CURRENT_PROJECT_VERSION = 2021080901;
 				DEVELOPMENT_TEAM = AM5PREL8LG;
 				IBSC_MODULE = Green_Pass_WatchKit_Extension;
 				INFOPLIST_FILE = "Green Pass WatchKit App/Info.plist";
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "scumm.it.Green-Pass.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -622,7 +622,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021080101;
+				CURRENT_PROJECT_VERSION = 2021080901;
 				DEVELOPMENT_ASSET_PATHS = "\"Green Pass/Preview Content\"";
 				DEVELOPMENT_TEAM = AM5PREL8LG;
 				ENABLE_PREVIEWS = YES;
@@ -632,7 +632,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "scumm.it.Green-Pass";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -647,7 +647,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2021080101;
+				CURRENT_PROJECT_VERSION = 2021080901;
 				DEVELOPMENT_ASSET_PATHS = "\"Green Pass/Preview Content\"";
 				DEVELOPMENT_TEAM = AM5PREL8LG;
 				ENABLE_PREVIEWS = YES;
@@ -657,7 +657,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "scumm.it.Green-Pass";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -709,14 +709,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		854DF84E269212DE000FAB31 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/twostraws/CodeScanner";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.7;
-			};
-		};
 		854DF8512692131D000FAB31 /* XCRemoteSwiftPackageReference "GzipSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/1024jp/GzipSwift.git";
@@ -744,11 +736,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		854DF84F269212DE000FAB31 /* CodeScanner */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 854DF84E269212DE000FAB31 /* XCRemoteSwiftPackageReference "CodeScanner" */;
-			productName = CodeScanner;
-		};
 		854DF8522692131D000FAB31 /* Gzip */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 854DF8512692131D000FAB31 /* XCRemoteSwiftPackageReference "GzipSwift" */;

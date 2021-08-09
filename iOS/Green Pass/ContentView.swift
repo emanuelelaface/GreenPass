@@ -5,11 +5,11 @@
 //  Created by Emanuele Laface on 2021-07-01.
 //
 
-import CodeScanner
 import SwiftUI
 
 struct ContentView: View {
     @State private var isShowingScanner = false
+    @State private var isLoadingScanner = false
     @State private var loadedPass = false
     @State private var qrdetails = false
     @State private var sendToWatch = true
@@ -291,11 +291,29 @@ struct ContentView: View {
                             self.invalidQR = false
                         }
                         }) {
-                    CodeScannerView(codeTypes: [.qr], simulatedData: simulatedDataTestRapid, completion: self.handleScan)
+                    CodeScannerView(codeTypes: [.qr], simulatedData: simulatedDataTestRapid, completion: self.handleScanQR)
                 }
                 .alert(isPresented: $showAlert) {
                     Alert( title: Text("Invalid QR Code"),
                            message: Text("The scanned QR Code is not a valid Green Pass."))
+                }
+                Button(action: {
+                    self.isLoadingScanner = true
+                }) {
+                    Image(systemName: "photo.on.rectangle.angled")
+                        .resizable()
+                        .scaledToFit()
+                        .padding(5)
+                        .foregroundColor(.black)
+                }
+                .sheet(isPresented: $isLoadingScanner,
+                       onDismiss: {
+                        if self.invalidQR {
+                            self.showAlert = true
+                            self.invalidQR = false
+                        }
+                        }) {
+                    CodeLoaderView(codeTypes: [.qr], simulatedData: simulatedDataTestRapid, completion: self.handleLoadQR)
                 }
                 Spacer()
             }.frame(minWidth:0, maxWidth: .infinity, minHeight:0, maxHeight: 40, alignment: .topLeading)
@@ -367,7 +385,7 @@ struct ContentView: View {
         .preferredColorScheme(.light)
     }
 
-    private func handleScan(result: Result<String, CodeScannerView.ScanError>) {
+    private func handleScanQR(result: Result<String, CodeScannerView.ScanError>) {
         self.loadedPass = false
         self.isShowingScanner = false
         switch result {
@@ -386,6 +404,32 @@ struct ContentView: View {
                 }
             }
        case .failure(let error):
+           self.invalidQR = true
+           self.loadedPass = true
+           print("Scanning failed \(error)")
+       }
+    }
+    private func handleLoadQR(result: Result<String, CodeLoaderView.ScanError>) {
+        self.loadedPass = false
+        self.isLoadingScanner = false
+        switch result {
+        case .success(let data):
+            if processData(data: data).version != "" {
+                savePass(pass: processData(data: data))
+                greenPass = loadPass()
+                self.loadedPass = true
+                connectivity.receivedText = ""
+                self.sendToWatch = true
+            }
+            else {
+                if greenPass.rawData != "" {
+                    self.invalidQR = true
+                    self.loadedPass = true
+                }
+            }
+       case .failure(let error):
+            self.invalidQR = true
+            self.loadedPass = true
            print("Scanning failed \(error)")
        }
     }
