@@ -406,7 +406,10 @@ public struct CodeLoaderView: UIViewControllerRepresentable {
 
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
-            self.present(imagePicker, animated: false, completion: nil)
+            imagePicker.view.frame.size.width = 0.0
+            imagePicker.view.frame.size.height = 0.0
+            
+            view.addSubview(imagePicker.view)
         }
 
         public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
@@ -429,12 +432,11 @@ public struct CodeLoaderView: UIViewControllerRepresentable {
             else{
                 print("Something went wrong")
             }
-            self.dismiss(animated: false, completion: nil)
+            self.dismiss(animated: true, completion: nil)
         }
-        
+
         public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            self.dismiss(animated: false, completion: nil)
-            super.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
         }
     }
     
