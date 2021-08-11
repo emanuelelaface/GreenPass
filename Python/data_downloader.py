@@ -50,7 +50,7 @@ for e in trustlist:
 json_str = json.dumps(mykeys) + "\n"               # 2. string (i.e. JSON)
 json_bytes = json_str.encode('utf-8')            # 3. bytes (i.e. UTF-8)
 
-with gzip.open("pub_keys.json.gz","w") as f:
+with gzip.open("../iOS/Green Pass/ehn-dcc-valuesets-main/pub_keys.json.gz","w") as f:
     f.write(json_bytes)
 
 prefix = "https://raw.githubusercontent.com/ehn-dcc-development/ehn-dcc-valuesets/release/2.0.0/"
@@ -62,5 +62,5 @@ for filename in files:
     url = prefix+filename
     response = requests.get(url)
     pkg = response.json()
-    with open(filename,"w") as f:
+    with open("../iOS/Green Pass/ehn-dcc-valuesets-main/"+filename,"w") as f:
         json.dump(pkg, f)

@@ -44,7 +44,10 @@ func epochToDate(timestamp: UInt64) -> String {
 func dateToDate(timestamp: String) -> String {
     let inFormat = DateFormatter()
     inFormat.dateFormat = "yyyy-MM-dd"
-    let inDate = inFormat.date(from: timestamp)!
+    guard let inDate = inFormat.date(from: timestamp)
+    else {
+        return ""
+    }
 
     let outFormat = DateFormatter()
     outFormat.dateFormat = "MMM d, yyyy"
@@ -55,7 +58,10 @@ func dateToDate(timestamp: String) -> String {
 func isoDateToDate(timestamp: String) -> String {
     let inFormat = DateFormatter()
     inFormat.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-    let inDate = inFormat.date(from: timestamp)!
+    guard let inDate = inFormat.date(from: timestamp)
+    else {
+        return ""
+    }
 
     let outFormat = DateFormatter()
     outFormat.dateFormat = "MMM d, yyyy - HH:mm:ss"
@@ -72,7 +78,10 @@ func birthdayToDate(timestamp: String) -> String {
     case 1:
         let inFormat = DateFormatter()
         inFormat.dateFormat = "yyyy-MM"
-        let inDate = inFormat.date(from: timestamp)!
+        guard let inDate = inFormat.date(from: timestamp)
+        else {
+            return ""
+        }
 
         let outFormat = DateFormatter()
         outFormat.dateFormat = "MMM, yyyy"
@@ -81,7 +90,10 @@ func birthdayToDate(timestamp: String) -> String {
     default:
         let inFormat = DateFormatter()
         inFormat.dateFormat = "yyyy-MM-dd"
-        let inDate = inFormat.date(from: timestamp)!
+        guard let inDate = inFormat.date(from: timestamp)
+        else {
+            return ""
+        }
 
         let outFormat = DateFormatter()
         outFormat.dateFormat = "MMM d, yyyy"
