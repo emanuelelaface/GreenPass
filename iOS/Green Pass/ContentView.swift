@@ -319,6 +319,8 @@ struct ContentView: View {
             }.frame(minWidth:0, maxWidth: .infinity, minHeight:0, maxHeight: 40, alignment: .topLeading)
             .background(passColor)
             .onAppear(){
+                download_conversion_tables()
+                download_keys()
                 greenPass = loadPass()
                 if greenPass.rawData != "" {
                     loadedPass = true
