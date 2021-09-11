@@ -162,10 +162,7 @@ func verifySignature(greenpass : GreenPass, digest: SHA256Digest) -> Bool  {
                             isValid = true
                         }
                     case "RSA":
-                        isValid = false
-                        // TO BE IMPLEMENTED ?
-                        // It seems this was used by a first version of Israel custom green pass with some security problem.
-                        // The EU version should use only ECDSA (or at least I hope so).
+                        isValid = verifyRSA(digest: digest, e: elem["e"] as! [UInt8], n: elem["n"] as! [UInt8], signature: greenpass.signature)
                     default:
                         print("Shouldn't be here")
                     }
@@ -224,7 +221,7 @@ func processData(data: String)->GreenPass {
             }
             switch signature {
             case let .byteString(signatureArray):
-                greenpass.signature = signatureArray                
+                greenpass.signature = signatureArray
             default:
                 print("Shouldn't be here")
             }

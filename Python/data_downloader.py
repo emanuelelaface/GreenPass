@@ -29,7 +29,7 @@ for kid_b64 in eulist:
         usage = ["v","t","r"]
 
     if (isinstance(pub, RSAPublicKey)):
-            mykeys.append({"kid": kid_b64, "algo": "RSA", "usage": usage, "e": list(int_to_bytes(pub.public_numbers().e)), "n": list(int_to_bytes(pub.public_numbers().n))})
+        mykeys.append({"kid": kid_b64, "algo": "RSA", "usage": usage, "e": list(int_to_bytes(pub.public_numbers().e)), "n": list(int_to_bytes(pub.public_numbers().n))})
     if (isinstance(pub, EllipticCurvePublicKey)):
         mykeys.append({"kid": kid_b64, "algo": "EC", "usage": usage, "x": list(pub.public_numbers().x.to_bytes(32, byteorder="big")), "y": list(pub.public_numbers().y.to_bytes(32, byteorder="big"))})
 
@@ -41,7 +41,6 @@ for e in trustlist:
     asn1data = b64decode(e['publicKey'])
     pub = serialization.load_der_public_key(asn1data)
     usage = ["v","t","r"]
-
     if (isinstance(pub, RSAPublicKey)):
             mykeys.append({"kid": e['kid'], "algo": "RSA", "usage": usage, "e": list(int_to_bytes(pub.public_numbers().e)), "n": list(int_to_bytes(pub.public_numbers().n))})
     if (isinstance(pub, EllipticCurvePublicKey)):
