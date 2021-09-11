@@ -761,7 +761,7 @@ public struct BInt: CustomStringConvertible, Comparable, Equatable, Hashable {
             x.magnitude.add(absy)
         } else {
             let cmp = x.magnitude.compare(absy)
-            x.magnitude.difference(absy)
+            _ = x.magnitude.difference(absy)
             if cmp < 0 {
                 x.isNegative = !x.isNegative
             } else if cmp == 0 {
@@ -858,7 +858,7 @@ public struct BInt: CustomStringConvertible, Comparable, Equatable, Hashable {
             x.magnitude.add(absy)
         } else {
             let cmp = x.magnitude.compare(absy)
-            x.magnitude.difference(absy)
+            _ = x.magnitude.difference(absy)
             if cmp < 0 {
                 x.isNegative = !x.isNegative
             } else if cmp == 0 {
