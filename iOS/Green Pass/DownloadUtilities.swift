@@ -12,6 +12,7 @@ let base_url_conversion_tables = "https://raw.githubusercontent.com/ehn-dcc-deve
 let conversion_tables = [ "country-2-codes", "disease-agent-targeted", "vaccine-prophylaxis", "vaccine-medicinal-product", "vaccine-mah-manf", "country-2-codes", "test-type", "test-result", "test-manf" ]
 let eu_keys = "https://verifier-api.coronacheck.nl/v4/verifier/public_keys"
 let uk_keys = "https://covid-status.service.nhsx.nhs.uk/pubkeys/keys.json"
+let revoke_list = "https://raw.githubusercontent.com/rgrunbla/TAC-Files/main/blacklist_qrcode.json"
 
 func requests(address: String, completion: @escaping (Data, Int) -> ())
 {
@@ -54,11 +55,31 @@ func download_conversion_tables() {
     }
 }
 
+func download_revoke_list() {
+    requests(address: revoke_list) { data, response in
+        if response == 200 {
+            do {
+                let jsonData = try JSON(data: data).rawData()
+                let gzippedData = try jsonData.gzipped()
+                let file = Bundle.main.path(forResource: "ehn-dcc-valuesets-main/blacklist_qrcode.json", ofType: "gz")
+                try gzippedData.write(to: URL(fileURLWithPath: file!))
+            }
+            catch {
+                print("Error Downloading File")
+            }
+        }
+        else {
+            print("Error Downloading File")
+        }
+    }
+}
+
 func download_keys() {
     struct KeyData: Codable {
         var kid: String
         var algo: String
         var usage: [String]
+        var country: String
         var x: [Int]? = nil
         var y: [Int]? = nil
         var e: [Int]? = nil
@@ -82,6 +103,7 @@ func download_keys() {
                     if usage.count == 0 {
                         usage = ["v", "t", "r"]
                     }
+                    let country = key.1[0]["ian"].string!
                     var x = [Int]()
                     var y = [Int]()
                     var e = [Int]()
@@ -95,7 +117,7 @@ func download_keys() {
                             y.append(Int(i))
                         }
                         algo = "EC"
-                        keys.append(KeyData(kid: kid, algo: algo, usage: usage, x: x, y: y))
+                        keys.append(KeyData(kid: kid, algo: algo, usage: usage, country: country, x: x, y: y))
                     }
                     else {
                         let key_length = pk.count-38
@@ -104,7 +126,7 @@ func download_keys() {
                         }
                         algo = "RSA"
                         e = [1,0,1]
-                        keys.append(KeyData(kid: kid, algo: algo, usage: usage, e: e, n: n))
+                        keys.append(KeyData(kid: kid, algo: algo, usage: usage, country: country, e: e, n: n))
                     }
                 }
             }
@@ -140,7 +162,7 @@ func download_keys() {
                             y.append(Int(i))
                         }
                         algo = "EC"
-                        keys.append(KeyData(kid: kid, algo: algo, usage: usage, x: x, y: y))
+                        keys.append(KeyData(kid: kid, algo: algo, usage: usage, country: "UK", x: x, y: y))
                     }
                     else {
                         let key_length = pk.count-38
@@ -149,7 +171,7 @@ func download_keys() {
                         }
                         algo = "RSA"
                         e = [1,0,1]
-                        keys.append(KeyData(kid: kid, algo: algo, usage: usage, e: e, n: n))
+                        keys.append(KeyData(kid: kid, algo: algo, usage: usage, country: "UK", e: e, n: n))
                     }
                 }
             }

@@ -25,13 +25,14 @@ for kid_b64 in eulist:
     asn1data = b64decode(eulist[kid_b64][0]['subjectPk'])
     pub = serialization.load_der_public_key(asn1data)
     usage = eulist[kid_b64][0]['keyUsage']
+    country = eulist[kid_b64][0]['ian']
     if len(usage) == 0:
         usage = ["v","t","r"]
 
     if (isinstance(pub, RSAPublicKey)):
-        mykeys.append({"kid": kid_b64, "algo": "RSA", "usage": usage, "e": list(int_to_bytes(pub.public_numbers().e)), "n": list(int_to_bytes(pub.public_numbers().n))})
+        mykeys.append({"kid": kid_b64, "algo": "RSA", "usage": usage, "country": country, "e": list(int_to_bytes(pub.public_numbers().e)), "n": list(int_to_bytes(pub.public_numbers().n))})
     if (isinstance(pub, EllipticCurvePublicKey)):
-        mykeys.append({"kid": kid_b64, "algo": "EC", "usage": usage, "x": list(pub.public_numbers().x.to_bytes(32, byteorder="big")), "y": list(pub.public_numbers().y.to_bytes(32, byteorder="big"))})
+        mykeys.append({"kid": kid_b64, "algo": "EC", "usage": usage, "country": country, "x": list(pub.public_numbers().x.to_bytes(32, byteorder="big")), "y": list(pub.public_numbers().y.to_bytes(32, byteorder="big"))})
 
 
 url = DEFAULT_TRUST_UK_URL
@@ -42,9 +43,9 @@ for e in trustlist:
     pub = serialization.load_der_public_key(asn1data)
     usage = ["v","t","r"]
     if (isinstance(pub, RSAPublicKey)):
-            mykeys.append({"kid": e['kid'], "algo": "RSA", "usage": usage, "e": list(int_to_bytes(pub.public_numbers().e)), "n": list(int_to_bytes(pub.public_numbers().n))})
+        mykeys.append({"kid": e['kid'], "algo": "RSA", "usage": usage, "country": "UK", "e": list(int_to_bytes(pub.public_numbers().e)), "n": list(int_to_bytes(pub.public_numbers().n))})
     if (isinstance(pub, EllipticCurvePublicKey)):
-        mykeys.append({"kid": e['kid'], "algo": "EC", "usage": usage, "x": list(pub.public_numbers().x.to_bytes(32, byteorder="big")), "y": list(pub.public_numbers().y.to_bytes(32, byteorder="big"))})
+        mykeys.append({"kid": e['kid'], "algo": "EC", "usage": usage, "country": "UK", "x": list(pub.public_numbers().x.to_bytes(32, byteorder="big")), "y": list(pub.public_numbers().y.to_bytes(32, byteorder="big"))})
 
 json_str = json.dumps(mykeys) + "\n"               # 2. string (i.e. JSON)
 json_bytes = json_str.encode('utf-8')            # 3. bytes (i.e. UTF-8)
@@ -63,3 +64,13 @@ for filename in files:
     pkg = response.json()
     with open("../iOS/Green Pass/ehn-dcc-valuesets-main/"+filename,"w") as f:
         json.dump(pkg, f)
+
+url = 'https://raw.githubusercontent.com/rgrunbla/TAC-Files/main/blacklist_qrcode.json'
+response = requests.get(url)
+pkg = response.json()
+
+json_str = json.dumps(pkg) + "\n"               # 2. string (i.e. JSON)
+json_bytes = json_str.encode('utf-8')            # 3. bytes (i.e. UTF-8)
+
+with gzip.open("../iOS/Green Pass/ehn-dcc-valuesets-main/blacklist_qrcode.json.gz","w") as f:
+    f.write(json_bytes)

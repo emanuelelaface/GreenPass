@@ -320,6 +320,7 @@ struct ContentView: View {
             .background(passColor)
             .onAppear(){
                 download_conversion_tables()
+                download_revoke_list()
                 download_keys()
                 greenPass = loadPass()
                 if greenPass.rawData != "" {

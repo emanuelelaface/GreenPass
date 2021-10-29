@@ -134,9 +134,9 @@ extension Data {
 }
 
 func verifySignature(greenpass : GreenPass, digest: SHA256Digest) -> Bool  {
+    let revokeFilename = "ehn-dcc-valuesets-main/blacklist_qrcode.json"
     let filename = "ehn-dcc-valuesets-main/pub_keys.json"
     var isValid = false
-    
     if let file = Bundle.main.path(forResource: filename, ofType: "gz") {
         do {
             let gzippedData = try Data(contentsOf: URL(fileURLWithPath: file))
@@ -145,7 +145,39 @@ func verifySignature(greenpass : GreenPass, digest: SHA256Digest) -> Bool  {
                 let kid = (elem["kid"] as! String)
                 let usage = (elem["usage"] as! [String])
                 let algo = (elem["algo"] as! String)
+                let country = (elem["country"] as! String)
+                var passid = ""
                 if (greenpass.kid == kid) && (usage.contains(greenpass.type[0].lowercased())) {
+                    switch greenpass.type {
+                    case "Vaccine":
+                        passid = country+greenpass.vaccination.certificateIdentifier
+                    case "Recovery":
+                        passid = country+greenpass.recovery.certificateIdentifier
+                    case "Test":
+                        passid = country+greenpass.test.certificateIdentifier
+                    default:
+                        return false
+                    }
+                    let idHash = (SHA256.hash(data: passid.data(using: .utf8) ?? Data()))
+                    let passHash = idHash.compactMap { String(format: "%02x", $0) }.joined()
+                    
+                    if let file = Bundle.main.path(forResource: revokeFilename, ofType: "gz") {
+                        do {
+                            let gzippedData = try Data(contentsOf: URL(fileURLWithPath: file))
+                            let revokeListData = try gzippedData.gunzipped()
+                            if let revokeList = try (JSONSerialization.jsonObject(with: revokeListData, options: []) as? [String]) {
+                                for invalidPass in revokeList {
+                                    if passHash == invalidPass {
+                                        return false
+                                    }
+                                }
+                            }
+                        }
+                        catch {
+                            print("Revoke List Error")
+                        }
+                    }
+                    
                     switch algo {
                     case "EC":
                         let x : [UInt8] = (elem["x"] as! [UInt8])
