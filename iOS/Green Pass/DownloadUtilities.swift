@@ -95,15 +95,15 @@ func download_keys() {
         if response == 200 {
             do {
                 let payload = try JSON(data: data)["payload"]
-                let eu_keys = try JSON(data: Data(base64Encoded: payload.string!)!)["eu_keys"]
+                let eu_keys = try JSON(data: Data(base64Encoded: payload.stringValue)!)["eu_keys"]
                 for key in eu_keys {
                     let kid = key.0
-                    let pk = Data(base64Encoded: key.1[0]["subjectPk"].string!)!
+                    let pk = Data(base64Encoded: key.1[0]["subjectPk"].stringValue)!
                     var usage = key.1[0]["keyUsage"].rawValue as! [String]
                     if usage.count == 0 {
                         usage = ["v", "t", "r"]
                     }
-                    let country = key.1[0]["ian"].string!
+                    let country = key.1[0]["ian"].stringValue
                     var x = [Int]()
                     var y = [Int]()
                     var e = [Int]()
@@ -146,8 +146,8 @@ func download_keys() {
             do {
                 let uk_keys = try JSON(data: data)
                 for key in uk_keys {
-                    let kid = (key.1["kid"]).string!
-                    let pk = Data(base64Encoded: key.1["publicKey"].string!)!
+                    let kid = (key.1["kid"]).stringValue
+                    let pk = Data(base64Encoded: key.1["publicKey"].stringValue, options: .ignoreUnknownCharacters)!
                     let usage = ["v", "t", "r"]
                     var x = [Int]()
                     var y = [Int]()
