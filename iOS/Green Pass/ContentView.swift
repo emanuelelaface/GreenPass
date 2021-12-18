@@ -324,6 +324,7 @@ struct ContentView: View {
                 download_keys()
                 greenPass = loadPass()
                 if greenPass.rawData != "" {
+                    greenPass = processData(data: greenPass.rawData)
                     loadedPass = true
                 }
             }
